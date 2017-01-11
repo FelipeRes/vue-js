@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="vue/vue.min.js"></script>
+	<!--<script src="css/main.css"></script>-->
+	<style type="text/css">
+		#header {
+			background-color: white;
+			border-color: black;
+		}
+		#body{
+			margin: 10px 10px 10px 10px;
+		}
+		#button{
+			background-color: red;
+			color:white;
+			width: 100px;
+			height: 30px;
+			text-align: center;
+			align-content: center;
+		}#dice{
+			margin: 20px 20px 20px 20px;
+			animation-duration: 1s;
+		}
+	</style>
+</head>
+<body>
+	<div id="header">
+		<logo></logo>
+		<h1 >RollDice</h1>
+	</div>
+	<hr>
+	<div id="body">
+		Numero de dados:<input v-model.number="numberOfDices" type="number">
+	</div>
+	<!--<div id="submit">
+		<input id="button" type="submit" value="Rolar!"></input>
+	</div>-->
+	<div id="submit">
+		<p>{{ value }}</p>
+		<button v-on:click="rollDices">Reverse Message</button>
+	</div>
+</body>
+<script src="modules/cabecalho.js"></script>
+</html>
