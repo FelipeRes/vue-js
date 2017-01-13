@@ -1,48 +1,39 @@
+
 var logo = Vue.extend({  
-	template: "<img src='img/logo.png' width = '100px' height ='100px'></img>"
+	template: "<!--<img src='img/logo.png' width = '100px' height ='100px'></img>-->\
+	Roll Dice!"
 })
-var dice = Vue.extend({  
-	template: "<img src='img/dice.png' width = '100px' height ='130px'></img>"
-})
-
-var body = new Vue({
-		el: '#body',
-		data: {
-			numberOfDices: 3
-		}
-	})
-var results = new Vue({
-	el: '#results',
-	data: {
-		list: []
-	}
-})
-
-var submit = new Vue({
-	el: '#submit',
-	data: {
-		value: 'Hello Vue.js!'
-	},
-	methods: {
-		rollDices: function () {
-			for (var i = 0; i <= 10; i++) {
-				submit.value = "llll";
-				this.value.concat("<img src='img/dice.png' width = '100px' height ='130px'></img>");
-				console.log(value);
-			}	
-		}
-	}
-})
-
 Vue.component('logo', logo)
 new Vue({  
 	el: '#header'
 })
 
-Vue.component('dice', dice)
-new Vue({  
-	el: '#results'
+Vue.component('dice', {
+  template: '\
+    <button v-on:click="value = Math.floor((Math.random() * 10) + 1) ">{{value}}</button>\
+  ',
+  data: function () {
+  return {
+    value: 0
+  }
+}
 })
+
+var dice = new Vue({
+  el: '#todo-list-example',
+  data: {
+    todos: [0]
+  },
+  methods: {
+    addNewTodo: function () {
+      this.todos.push(0);
+    },
+    removeNewTodo: function () {
+      this.todos.shift();
+    }
+  }
+})
+
 
 
 
