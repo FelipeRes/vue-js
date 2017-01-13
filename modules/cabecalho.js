@@ -14,7 +14,7 @@ Vue.component('dice', {
   ',
   data: function () {
   return {
-    value: 0
+    value: Math.floor((Math.random() * 10) + 1)
   }
 }
 })

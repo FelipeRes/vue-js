@@ -3,41 +3,7 @@
 <head>
 	<title></title>
 	<script src="vue/vue.min.js"></script>
-	<style type="text/css">
-		#header {
-			background-color: white;
-			border: 1px solid;
-		}
-		.controlButton{
-			width: 100px;
-			height: 100px;
-			display: block;
-			margin: 30px;	
-			float: left;
-			border: none;
-			font-size: 28px;
-			color: #00AA00;
-		}
-		.button {
-			width: 100px;
-			height:100px;
-			display:block;
-			margin: 30px;	
-			float: left;
-			background-color: #4CAF50;
-			border: none;
-			font-size: 28px;
-			color: #FFFFFF;
-			-webkit-transition-duration: 0.4s; /* Safari */
-			transition-duration: 0.4s;
-		}
-		.button:active {
-			transform: rotate(360deg);
-            -webkit-transform: rotate(360deg);
-            -ms-transform: rotate(360deg);
-            transition: 0s
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="style/main.css">
 </head>
 <body>
 	<div id="header">
@@ -47,10 +13,10 @@
 	<hr>
 	<div class="content" id="todo-list-example">
 		<button class="controlButton" v-on:click="addNewTodo">+</button>
+		<button class="controlButton" v-on:click="removeNewTodo" >-</button>
 		<div v-for="item in todos">
 			<dice class="button" id = "dice"></dice>
 		</div>
-		<button class="controlButton" v-on:click="removeNewTodo" >-</button>
 	</div>
 </body>
 <script src="modules/cabecalho.js"></script>

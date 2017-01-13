@@ -1,0 +1,48 @@
+#header {
+			background-color: white;
+			border: 1px solid;
+		}
+		.controlButton{
+			width: 100px;
+			height: 100px;
+			display: block;
+			margin: 30px;	
+			float: left;
+			border: none;
+			font-size: 34px;
+			color: #00AA00;
+			-webkit-transition-duration: 0.4s; /* Safari */
+			transition-duration: 0.1s;
+		}
+		.controlButton:active{
+			transform: scale(0.7);
+            -webkit-transform: scale(0.7);
+            -ms-transform: scale(0.7);
+            animation-name: example;
+    		animation-duration: 1s;
+		}
+		.button {
+			width: 100px;
+			height:100px;
+			display:block;
+			margin: 30px;	
+			float: left;
+			background-color: #4CAF50;
+			border: none;
+			font-size: 34px;
+			color: #FFFFFF;
+			-webkit-transition-duration: 0.5s; /* Safari */
+			transition-duration: 0.5s;
+			animation-name: example;
+    		animation-duration: 1s;
+		}
+		.button:active {
+			transform: rotate(360deg);
+            -webkit-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+			transition: 0s
+		}
+		@keyframes example {
+    		0%   {background-color:white;}
+    		100%  {background-color:#4CAF50;}
+		}
